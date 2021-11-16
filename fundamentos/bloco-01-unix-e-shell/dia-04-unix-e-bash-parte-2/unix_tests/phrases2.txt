@@ -1,0 +1,6 @@
+Olá, tudo bem?
+Qual o seu nome?
+Qual a sua idade?
+Onde você mora?
+Brasil
+Argentina
