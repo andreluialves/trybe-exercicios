@@ -8,6 +8,17 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 
 ## Fundamentos do Desenvolvimento Web :white_check_mark:
 
+##### [Bloco 1: Introdução - Unix & Shell](https://github.com/andreluialves/trybe-exercicios/tree/main/fundamentos/bloco-01-unix-e-shell)
+
+- [x] 1-3: _Unix & Shell- Part 1_
+- [x] 1-4: _Unix & Shell- Part 2_
+
+##### Bloco 2: Git & GitHub
+
+- [x] 2-1: _O que é e para que serve?_
+- [x] 2-2: _Entendendo os comandos_
+- [x] 2-3: _Internet - Entendendo como ela funciona_
+
 ##### Bloco 1: Introdução - Unix & Shell
 
 - [ ] 1-3: _Unix & Shell- Part 1_
