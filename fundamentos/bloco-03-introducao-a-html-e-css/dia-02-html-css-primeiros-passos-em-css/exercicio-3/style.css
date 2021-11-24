@@ -1,0 +1,41 @@
+/* Modificando o tamanho, a cor do texto e a família da fonte do h1 */
+h1 {
+    font-size: 65px;
+    color: orange;
+    font-family: sans-serif;
+  }
+
+  /* Modificando a cor de fundo da lista não ordenada */
+  ul {
+    background-color: greenyellow;
+  }
+  /* Criando classe para modificar fundo da lista não ordenada e do parágrafo */
+  .bg-blue {
+    background-color: blue;
+  }
+  /* Deixando o parágrafo com font-weight 600 e com o tamanho da fonte 3 vezes maior que a fonte do body */
+  p {
+    font-weight:600;
+    font-size: 3em;
+  }
+  /* Alterando o tamanho da fonte para 16px */
+  body {
+    font-size: 16px;
+  }
+  /* Explorando as propriedades font-style, line-height, text-align e text-decoration */
+  li {
+    font-style: italic;
+    line-height: 25px;
+    text-align: center;
+    text-decoration: underline;
+  }
+  /* Alterando a cor de fundo de cada item da lista para a cor correspondente ao texto */
+  #amarelo {
+    background-color: yellow;
+  }
+  #vermelho {
+    background-color: red;
+  }
+  #marrom {
+    background-color: brown;
+  }
