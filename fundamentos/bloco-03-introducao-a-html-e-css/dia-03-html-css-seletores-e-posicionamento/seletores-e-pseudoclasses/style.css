@@ -1,15 +1,17 @@
+/* Criando um arquivo no mesmo diretório e nomeando-o de 'style.css'. */
+
 /* Centralizando o h1 e o parágrafo */
 h1, p {
   text-align: center;
 }
 
-/* Mudando a cor de fundo da lista de sites quando o cursor estiver sobre o item. */
-a li:hover {
+/* Mudando a cor de fundo das listas quando o cursor estiver sobre o item. */
+ul:hover, ol:hover {
   background-color: greenyellow;
 }
 
-/*  Mudando a fonte do item da lista de sites quando ele for clicado. */
-a li:active {
+/*  Mudando a fonte dos itens da lista quando eles forem clicados. */
+li:active {
   font-family:monospace;
 }
 
