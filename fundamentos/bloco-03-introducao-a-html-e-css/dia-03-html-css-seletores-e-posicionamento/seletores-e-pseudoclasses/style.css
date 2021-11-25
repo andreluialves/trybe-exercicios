@@ -1,0 +1,4 @@
+/* Centralizando o h1 e o parágrafo */
+h1, p {
+  text-align: center;
+}
