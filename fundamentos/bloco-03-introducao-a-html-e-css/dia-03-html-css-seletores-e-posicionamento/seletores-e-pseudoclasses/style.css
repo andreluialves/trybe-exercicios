@@ -3,12 +3,17 @@ h1, p {
   text-align: center;
 }
 
-/* Mudando a cor de fundo da lista quando o cursor estiver sobre o item. */
-li:hover {
+/* Mudando a cor de fundo da lista de sites quando o cursor estiver sobre o item. */
+a li:hover {
   background-color: greenyellow;
 }
 
-/*  Mudando a fonte do item da lista quando ele for clicado. */
-li:active {
+/*  Mudando a fonte do item da lista de sites quando ele for clicado. */
+a li:active {
   font-family:monospace;
+}
+
+/* Adicionando a propriedade 'list-style: none' para ambas as listas. */
+li {
+  list-style: none;
 }
