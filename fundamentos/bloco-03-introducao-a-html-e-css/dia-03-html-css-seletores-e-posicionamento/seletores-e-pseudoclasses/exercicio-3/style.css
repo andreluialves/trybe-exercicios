@@ -1,0 +1,73 @@
+/* Fazendo com que todos os itens das listas ordenadas tenham uma cor de fundo amarela. */
+/* Fazendo que todas as li's terem 20px de tamanho de fonte */
+li {
+    background-color: yellow;
+    font-size: 20px;
+}
+
+/* Todo texto em itálico dentro de alguma li, ficará em negrito. */
+li em {
+    font-weight: 700;
+}
+
+/* Se a numeração do item da lista for PAR, a cor de fonte será verde. */ 
+li:nth-of-type(2n) {
+    color: green;
+}
+
+/*  Quando a numeração da lista for considerado ÍMPAR, o texto ficará maiúsculo. */
+li:nth-of-type(2n-1) {
+    text-transform: uppercase;
+}
+
+/* Fazendo todas as tags Header (h1, h2...) possuírem cor de fonte vermelha. */
+h1,h2,h3,h4,h5,h6 {
+    color: red;
+}
+
+/* Se alguma tag h1 ou h2 estiver em itálico, o tamanho da fonte será de 40px e a tag ganhará uma borda de 1px preta e sólida */
+h1 em, h2 em {
+    font-size: 40px;
+    border: 1px solid #000;
+}
+
+/* Na listagem de linguagens de programação, faça com que as 3 primeiras da lista possuam cor de fonte azul. */
+
+#linguagens li:not(:nth-of-type(n+4)) {
+    color: blue;
+}
+
+/* Na listagem de linguagens de programação, se alguma possuir "java*" no texto, terá a cor de fundo rosa. */
+.bg-pink {
+    background-color: pink;
+}
+
+/* Fazendo com que cada link na lista de aliados da pessoa desenvolvedora, ao passar o mouse sobre o elemento, o texto 
+fique em negrito e a fonte com a cor "temática do site". */
+
+#aliados li:hover {
+    font-weight: 700;
+}
+
+#aliados a[href*="stackoverflow"]:hover {
+    color: orange;
+}
+
+#aliados a[href*="w3schools"]:hover {
+    color: green;
+}
+
+#aliados a[href*="mozilla"]:hover {
+    color: black;
+}
+
+#aliados a[href*="devdocs"]:hover {
+    color: yellow;
+}
+
+#aliados a[href*="trybe"]:hover {
+    color: green;
+}
+
+
+
