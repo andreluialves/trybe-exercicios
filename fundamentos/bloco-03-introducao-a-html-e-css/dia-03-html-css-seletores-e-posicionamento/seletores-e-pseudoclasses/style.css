@@ -2,3 +2,13 @@
 h1, p {
   text-align: center;
 }
+
+/* Mudando a cor de fundo da lista quando o cursor estiver sobre o item. */
+li:hover {
+  background-color: greenyellow;
+}
+
+/*  Mudando a fonte do item da lista quando ele for clicado. */
+li:active {
+  font-family:monospace;
+}
