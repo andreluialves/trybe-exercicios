@@ -5,7 +5,9 @@ for (let index = 0; index < numbers.length; index += 1) {
   sum += numbers[index];
 }
 
-if (sum > 20) {
+const media = sum / numbers.length;
+
+if (media > 20) {
   console.log('valor maior que 20');
 } else {
   console.log('valor menor que 20');
