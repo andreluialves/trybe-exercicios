@@ -1,4 +1,5 @@
 const readline = require('readline-sync');
+
 const randomNumber = () => {
   let chooseNumber = readline.questionInt('Escolha um número de 0 a 10: ');
   const randomNum =  (Math.random() * 10).toFixed(0);
