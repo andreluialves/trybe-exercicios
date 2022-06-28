@@ -13,6 +13,9 @@ app.post('/user', middlewares.createUser);
 
 app.get('/user', middlewares.getAllUsers);
 
+app.get('/user/:id', middlewares.getUserById);
+
+
 app.use(middlewares.error);
 
 // Definimos a porta

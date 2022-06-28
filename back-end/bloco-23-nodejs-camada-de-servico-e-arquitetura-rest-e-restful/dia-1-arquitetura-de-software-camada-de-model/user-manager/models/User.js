@@ -26,8 +26,17 @@ const findAll = async () => {
   return users[0];
 }
 
+const findById = async (id) => {
+  const query = 'SELECT * FROM users WHERE id = ?';
+  const [user] = await connection.execute(query, [id]);
+  if (user[0])
+    return formatUser(user[0]);
+  return null;
+}
+
 module.exports = {
   formatUser,
   create,
-  findAll
+  findAll,
+  findById
 };
