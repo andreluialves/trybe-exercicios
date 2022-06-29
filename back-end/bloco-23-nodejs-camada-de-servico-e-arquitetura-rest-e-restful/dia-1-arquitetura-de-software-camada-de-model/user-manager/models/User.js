@@ -1,5 +1,5 @@
-// Começamos importando a conexão com o banco
 const connection = require('./connection');
+const Joi = require('joi');
 
 const formatUser = ({ id, first_name: firstName, last_name: lastName, email }) => {
   return {
@@ -8,16 +8,23 @@ const formatUser = ({ id, first_name: firstName, last_name: lastName, email }) =
     lastName,
     email,
   };
-  }
+}
 
-// Função responsável por criar o usuário no banco de dados
-const  create = async ({ firstName, lastName, email, password }) => {
-const query = 'INSERT INTO users (first_name, last_name, email, password) VALUES (?,?,?,?)';
-// Ao invés de chamarmos connection como uma function, agora utilizamos diretamente o método `execute`
-const {insertId} = connection.execute(query, [firstName, lastName, email, password])
-return { id: insertId,  firstName, lastName, email };
-// Obtemos o resultado da inserção e o utilizamos para obter o ID recém inserido
-// .then(([result]) => ({ id: result.insertId, firstName, lastName, email }));
+const userSchema = Joi.object({
+  firstName: Joi.string().required(),
+  lastName: Joi.string().required(),
+  email: Joi.string().email().required(),
+  password: Joi.string().min(6).required()
+})
+
+function isValid(userData) {
+  return userSchema.validate(userData);
+}
+
+const create = async ({ firstName, lastName, email, password }) => {
+  const query = 'INSERT INTO users (first_name, last_name, email, password) VALUES (?,?,?,?)';
+  const { insertId } = connection.execute(query, [firstName, lastName, email, password])
+  return { id: insertId, firstName, lastName, email };
 }
 
 const findAll = async () => {
@@ -34,9 +41,18 @@ const findById = async (id) => {
   return null;
 }
 
+const updateUser = async (id, { firstName, lastName, email, password }) => {
+	const query = ` UPDATE users SET first_name = ?, last_name = ?, email = ?, password = ? WHERE id = ? `;
+	await connection.execute(query, [firstName, lastName, email, password, id]);
+
+	return findById(id);
+}
+
 module.exports = {
   formatUser,
   create,
   findAll,
-  findById
+  findById,
+  updateUser,
+  isValid
 };

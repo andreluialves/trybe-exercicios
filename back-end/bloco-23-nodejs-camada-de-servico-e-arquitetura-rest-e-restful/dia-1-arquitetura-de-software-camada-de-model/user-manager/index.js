@@ -15,6 +15,7 @@ app.get('/user', middlewares.getAllUsers);
 
 app.get('/user/:id', middlewares.getUserById);
 
+app.put('/user/:id', middlewares.updateUser);
 
 app.use(middlewares.error);
 
